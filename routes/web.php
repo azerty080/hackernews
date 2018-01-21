@@ -13,10 +13,10 @@
 
 Route::get('/', 'PagesController@index');
 
-/*
-Route::get('/home', 'PagesController@home');
 
-*/
+Route::get('/home', 'PagesController@index');
+
+
 Route::get('/instructies', 'PagesController@instructies');
 
 
@@ -27,6 +27,17 @@ Route::get('/register', 'PagesController@register');
 
 
 
-Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/article/add', 'ArticlesController@add');
+
+Route::get('/article/edit/{id}', 'ArticlesController@edit');
+
+
+
+
+Route::get('/comments/{id}', 'CommentsController@edit');
+
+Route::get('/comments/edit/{id}', 'CommentsController@edit');
+
+
+Auth::routes();
