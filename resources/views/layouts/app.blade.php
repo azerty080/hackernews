@@ -33,7 +33,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="{{ route('index') }}">
                         Hackernews.local
                     </a>
                 </div>
@@ -41,14 +41,14 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="/home">Home</a></li>
+                        <li><a href="{{ route('home') }}">Home</a></li>
 
                         @guest
                         @else
-                            <li><a href="/article/add">Add article</a></li>
+                            <li><a href="{{ route('add_article') }}">Add article</a></li>
                         @endguest
                     
-                        <li><a href="/instructies">Instructies</a></li>
+                        <li><a href="{{ route('instructies') }}">Instructies</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
