@@ -41,9 +41,14 @@
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
                     <!-- Left Side Of Navbar -->
                     <ul class="nav navbar-nav">
-                        <li><a href="http://oplossingen.web-backend.local/Laravel/reddit.int/public/home">Home</a></li>
+                        <li><a href="/home">Home</a></li>
+
+                        @guest
+                        @else
+                            <li><a href="/article/add">Add article</a></li>
+                        @endguest
                     
-                        <li><a href="http://oplossingen.web-backend.local/Laravel/reddit.int/public/instructies">Instructies</a></li>
+                        <li><a href="/instructies">Instructies</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
