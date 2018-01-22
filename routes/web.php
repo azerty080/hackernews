@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', 'PagesController@index')->name('index');
-Route::get('/home', 'PagesController@index')->name('home');
+Route::get('/', 'ArticlesController@index')->name('index');
+Route::get('/home', 'ArticlesController@index')->name('home');
 
 Route::get('/instructies', 'PagesController@instructies')->name('instructies');
 
@@ -23,31 +23,31 @@ Route::get('/article/add', 'ArticlesController@add')->name('add_article');
 Route::post('/article/add', 'ArticlesController@store')->name('');
 
 
-Route::get('/article/edit/{id}', 'ArticlesController@edit')->name('edit_article');
-Route::post('/article/edit/{id}', 'ArticlesController@update')->name('');
+Route::get('/article/edit/{article}', 'ArticlesController@edit')->name('edit_article');
+Route::post('/article/edit/{article}', 'ArticlesController@update')->name('');
 
 
-Route::get('/article/delete/{id}', 'ArticlesController@delete')->name('delete_article');
-Route::post('/article/delete/{id}', 'ArticlesController@remove')->name('');
-
-
-
-
-Route::get('/comments/{id}', 'CommentsController@edit');
+Route::get('/article/delete/{article}', 'ArticlesController@delete')->name('delete_article');
+Route::post('/article/delete/{article}', 'ArticlesController@remove')->name('');
 
 
 
-
-Route::get('/comments/add/{id}', 'CommentsController@add')->name('add_comment');
-Route::post('/comments/add/{id}', 'CommentsController@add')->name('');
-
-
-Route::get('/comments/edit/{id}', 'CommentsController@edit')->name('edit_comment');
-Route::post('/comments/edit/{id}', 'CommentsController@edit')->name('');
+/*
+Route::get('/comments/{article}', 'CommentsController@edit');
+*/
 
 
-Route::get('/comments/delete/{id}', 'CommentsController@delete')->name('delete_comment');
-Route::post('/comments/delete/{id}', 'CommentsController@delete')->name('');
+
+Route::get('/comments/add/{comment}', 'CommentsController@add')->name('add_comment');
+Route::post('/comments/add/{comment}', 'CommentsController@store')->name('');
+
+
+Route::get('/comments/edit/{comment}', 'CommentsController@edit')->name('edit_comment');
+Route::post('/comments/edit/{comment}', 'CommentsController@update')->name('');
+
+
+Route::get('/comments/delete/{comment}', 'CommentsController@delete')->name('delete_comment');
+Route::post('/comments/delete/{comment}', 'CommentsController@remove')->name('');
 
 
 
