@@ -18,18 +18,19 @@ Route::get('/instructies', 'PagesController@instructies')->name('instructies');
 
 
 
-
 Route::get('/article/add', 'ArticlesController@add')->name('add_article');
 Route::post('/article/add', 'ArticlesController@store')->name('store_article');
 
-
 Route::get('/article/edit/{article}', 'ArticlesController@edit')->name('edit_article');
-Route::post('/article/edit/{article}', 'ArticlesController@update')->name('update_article');
-
+Route::patch('/article/edit/{article}', 'ArticlesController@update')->name('update_article');
 
 Route::get('/article/delete/{article}', 'ArticlesController@delete')->name('delete_article');
 Route::post('/article/delete/{article}', 'ArticlesController@remove')->name('');
 
+
+
+Route::patch('/vote/up/{article}', 'ArticlesController@upvote')->name('upvote_article');
+Route::patch('/vote/down/{article}', 'ArticlesController@downvote')->name('downvote_article');
 
 
 
@@ -37,14 +38,10 @@ Route::get('/comments/{article}', 'ArticlesController@show')->name('show_article
 
 
 
-
-Route::get('/comments/add/{comment}', 'CommentsController@add')->name('add_comment');
 Route::post('/comments/add/{comment}', 'CommentsController@store')->name('store_comment');
 
-
 Route::get('/comments/edit/{comment}', 'CommentsController@edit')->name('edit_comment');
-Route::post('/comments/edit/{comment}', 'CommentsController@update')->name('update_comment');
-
+Route::patch('/comments/edit/{comment}', 'CommentsController@update')->name('update_comment');
 
 Route::get('/comments/delete/{comment}', 'CommentsController@delete')->name('delete_comment');
 Route::post('/comments/delete/{comment}', 'CommentsController@remove')->name('');
