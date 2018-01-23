@@ -25,7 +25,7 @@ Route::get('/article/edit/{article}', 'ArticlesController@edit')->name('edit_art
 Route::patch('/article/edit/{article}', 'ArticlesController@update')->name('update_article');
 
 Route::get('/article/delete/{article}', 'ArticlesController@delete')->name('delete_article');
-Route::post('/article/delete/{article}', 'ArticlesController@remove')->name('');
+Route::delete('/article/delete/{article}', 'ArticlesController@destroy')->name('destroy_article');
 
 
 
@@ -44,7 +44,7 @@ Route::get('/comments/edit/{comment}', 'CommentsController@edit')->name('edit_co
 Route::patch('/comments/edit/{comment}', 'CommentsController@update')->name('update_comment');
 
 Route::get('/comments/delete/{comment}', 'CommentsController@delete')->name('delete_comment');
-Route::post('/comments/delete/{comment}', 'CommentsController@remove')->name('');
+Route::delete('/comments/delete/{comment}', 'CommentsController@destroy')->name('destroy_article');
 
 
 
