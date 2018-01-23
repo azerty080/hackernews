@@ -10,5 +10,37 @@ use Illuminate\Http\Request;
 
 class CommentsController extends Controller
 {
-    //
+    public function __construct()
+    {
+    	
+    }
+
+    public function store()
+    {
+        
+    }
+
+
+    public function edit()
+    {
+        
+    }
+
+
+    public function update()
+    {
+        
+    }
+
+
+    public function delete()
+    {
+        
+    }
+
+
+    public function destroy()
+    {
+        
+    }
 }
