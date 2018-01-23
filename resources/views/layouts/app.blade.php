@@ -47,8 +47,6 @@
                         @else
                             <li><a href="{{ route('add_article') }}">Add article</a></li>
                         @endguest
-                    
-                        <li><a href="{{ route('instructies') }}">Instructies</a></li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->
