@@ -47,6 +47,7 @@ Route::get('/comments/delete/{comment}', 'CommentsController@delete')->name('del
 Route::delete('/comments/delete/{comment}', 'CommentsController@destroy')->name('destroy_article');
 
 
+Route::post('/', 'ArticlesController@cancel_delete')->name('cancel_delete');
 
 
 Auth::routes();
