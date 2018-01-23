@@ -16,7 +16,7 @@
                                         <div class="form-inline upvote">
                                             <i class="fa fa-btn fa-caret-up disabled upvote" title="you need to be logged in to upvote"></i>
                                         </div>
-                                        <div class="form-inline upvote">
+                                        <div class="form-inline downvote">
                                             <i class="fa fa-btn fa-caret-down disabled downvote" title="you need to be logged in to downvote"></i>
                                         </div>
                                     @else                                     
@@ -25,16 +25,16 @@
                                             {{ method_field('PATCH') }}
 
                                             <button>
-                                                <i class="fa fa-btn fa-caret-up" title="upvote"></i>
+                                                <i class="fa fa-btn fa-caret-up upvote" title="upvote"></i>
                                             </button>
                                         </form>
 
-                                        <form action="{{ route('upvote_article', ['article' => $article->id]) }}" method="POST" class="form-inline downvote">
+                                        <form action="{{ route('downvote_article', ['article' => $article->id]) }}" method="POST" class="form-inline downvote">
                                             {{ csrf_field() }}
                                             {{ method_field('PATCH') }}
 
                                             <button>
-                                                <i class="fa fa-btn fa-caret-down" title="downvote"></i>
+                                                <i class="fa fa-btn fa-caret-down downvote" title="downvote"></i>
                                             </button>
                                         </form>
                                     @endif
@@ -58,4 +58,4 @@
         </div>
     </div>
 </div>
-@endsection
+@stop

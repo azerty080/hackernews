@@ -41,7 +41,7 @@ Route::get('/comments/edit/{comment}', 'CommentsController@edit')->name('edit_co
 Route::patch('/comments/edit/{comment}', 'CommentsController@update')->name('update_comment');
 
 Route::get('/comments/delete/{comment}', 'CommentsController@delete')->name('delete_comment');
-Route::delete('/comments/delete/{comment}', 'CommentsController@destroy')->name('destroy_article');
+Route::delete('/comments/delete/{comment}', 'CommentsController@destroy')->name('destroy_comment');
 
 
 Route::post('/', 'ArticlesController@cancel_delete')->name('cancel_delete');

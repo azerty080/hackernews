@@ -153,7 +153,7 @@ class ArticlesController extends Controller
         $vote->type = "down";
         $vote->save();
 
-        session()->flash('success', trans('messages.voted', ['action' => 'upvoted', 'title' => $article->title]));
+        session()->flash('success', trans('messages.voted', ['action' => 'downvoted', 'title' => $article->title]));
 
         return back();
     }

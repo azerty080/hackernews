@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
- <div class="container">
+<div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
@@ -25,7 +25,7 @@
                     Edit article
 
 
-                    <a href="{{ route('remove_article', ['article' => $article->id]) }}" class="btn btn-danger btn-xs pull-right">
+                    <a href="{{ route('delete_article', ['article' => $article->id]) }}" class="btn btn-danger btn-xs pull-right">
                         <i class="fa fa-btn fa-trash" title="delete"></i> delete article
                     </a>
                 </div>
@@ -76,4 +76,4 @@
     </div>
 </div>
 
-@endsection
+@stop

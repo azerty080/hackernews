@@ -33,7 +33,7 @@
                                 <label for="url" class="col-sm-3 control-label">URL</label>
 
                                 <div class="col-sm-6">
-                                    <input id="url" type="text" class="form-control" name="url">
+                                    <input id="url" type="text" class="form-control" name="url" value="{{ old('url') }}">
                                 </div>
                             </div>
 
@@ -51,4 +51,4 @@
         </div>
     </div>
 </div>
-@endsection
+@stop
