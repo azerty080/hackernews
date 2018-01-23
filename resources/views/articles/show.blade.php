@@ -52,7 +52,7 @@
                                 </button>
                             </form>
 
-                            <form action="{{ route('upvote_article', ['article' => $article->id]) }}" method="POST" class="form-inline downvote">
+                            <form action="{{ route('downvote_article', ['article' => $article->id]) }}" method="POST" class="form-inline downvote">
                                 {{ csrf_field() }}
                                 {{ method_field('PATCH') }}
 
@@ -145,4 +145,4 @@
         </div>
     </div>
 </div>
-@endsection
+@stop
