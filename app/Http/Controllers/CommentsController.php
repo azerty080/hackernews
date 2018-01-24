@@ -65,7 +65,7 @@ class CommentsController extends Controller
     {
         if($comment->user_id == Auth::id())
         {
-            session()->flash('delete_comment_confirmation', trans('messages.confirmation', ['item' => 'comment']));
+            session()->flash('delete_comment_confirm', trans('messages.confirm', ['item' => 'comment']));
 
             session()->flash('comment', $comment);
 

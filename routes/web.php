@@ -35,7 +35,8 @@ Route::get('/comments/{article}', 'ArticlesController@show')->name('show_article
 
 
 
-Route::post('/comments/add/{comment}', 'CommentsController@store')->name('store_comment');
+Route::post('/comments/add/{article}', 'CommentsController@store')->name('store_comment');
+
 
 Route::get('/comments/edit/{comment}', 'CommentsController@edit')->name('edit_comment');
 Route::patch('/comments/edit/{comment}', 'CommentsController@update')->name('update_comment');
