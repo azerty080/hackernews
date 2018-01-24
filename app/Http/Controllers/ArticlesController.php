@@ -22,7 +22,7 @@ class ArticlesController extends Controller
     {
     	$articles = Article::all()->sortByDesc('points');
 
-    	return view('home', compact('articles'));
+    	return view('index', compact('articles'));
     }
 
 
