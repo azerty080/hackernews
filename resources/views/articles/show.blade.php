@@ -4,8 +4,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
-
-            
             <div class="breadcrumb">
                 
                 <a href="{{ route('index') }}">← back to overview</a>
@@ -16,7 +14,6 @@
             @include('delete_confirm')
             @include('success')
             @include('danger')
-
             
             <div class="panel panel-default">
                 <div class="panel-heading clearfix">
@@ -28,9 +25,6 @@
                         </a>
                     @endif
                 </div>
-
-
-
 
                 <div class="panel-content">
                     <div class="vote">
@@ -64,8 +58,6 @@
 
                     </div>
 
-
-                       
                     <div class="url">
                         <a href="{{ url($article->url) }}" class="urlTitle">{{ $article->title }}</a>
                              @if ($article->user_id == Auth::id())
@@ -73,11 +65,9 @@
                             @endif
                     </div> 
                     
-                    
                     <div class="info">
                         {{ $article->points }} points | posted by {{ $article->user->name }} | <a href="{{ route('show_article', ['article' => $article->id]) }}">{{ $article->comments->count() }} comments</a>
                     </div>
-
 
                     <div class="comments">
                         @if ($article->comments->count() > 0)
@@ -108,7 +98,6 @@
 
                     </div>
 
-                        
                     @if (Auth::guest())
                         <div>
                             <p>You need to be <a href="{{ url('/login') }}">logged in</a> to comment</p>

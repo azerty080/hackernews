@@ -132,7 +132,7 @@ class ArticlesController extends Controller
 
     public function upvote(Article $article)
     {
-    	$article->increment('points');
+        $article->increment('points');
         $vote = new Vote;
         $vote->user_id = Auth::id();
         $vote->article_id = $article->id;

@@ -19,7 +19,7 @@
                                         <div class="form-inline downvote">
                                             <i class="fa fa-btn fa-caret-down disabled downvote" title="you need to be logged in to downvote"></i>
                                         </div>
-                                    @else                                     
+                                    @else
                                         <form action="{{ route('upvote_article', ['article' => $article->id]) }}" method="POST" class="form-inline upvote">
                                             {{ csrf_field() }}
                                             {{ method_field('PATCH') }}
@@ -46,7 +46,7 @@
                                             <a href="{{ route('edit_article', ['article' => $article->id]) }}" class="btn btn-primary btn-xs edit-btn">edit</a>
                                         @endif
                                 </div> 
-                                
+
                                 <div class="info">
                                     {{ $article->points }} points | posted by {{ $article->user->name }} | <a href="{{ route('show_article', ['article' => $article->id]) }}">{{ $article->comments->count() }} comments</a>
                                 </div>
