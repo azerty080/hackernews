@@ -39,7 +39,7 @@
                             <label for="article-url" class="col-sm-3 control-label">URL</label>
 
                             <div class="col-sm-6">
-                                <input type="text" name="url" id="article-url" class="form-control"  value="{{ $article->url }}">
+                                <input type="text" name="url" id="article-url" class="form-control"  value="{{ $article->url }}" maxlength="1000">
                             </div>
                         </div>
 

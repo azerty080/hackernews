@@ -31,7 +31,7 @@
                             <label for="comment-title" class="col-sm-3 control-label">Comment</label>
 
                             <div class="col-sm-6">
-                                <textarea class="form-control" id="body" name="body">{{ $comment->body }}</textarea>
+                                <textarea class="form-control" id="body" name="body" maxlength="1000">{{ $comment->body }}</textarea>
                             </div>
                         </div>
 
